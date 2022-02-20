@@ -1,16 +1,10 @@
 {
   "files": {
-    "main.css": "/react-season-component-web/static/css/main.073c9b0a.css",
-    "main.js": "/react-season-component-web/static/js/main.3c71cee5.js",
-    "static/js/787.b44c194f.chunk.js": "/react-season-component-web/static/js/787.b44c194f.chunk.js",
-    "static/media/logo.svg": "/react-season-component-web/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/react-season-component-web/index.html",
-    "main.073c9b0a.css.map": "/react-season-component-web/static/css/main.073c9b0a.css.map",
-    "main.3c71cee5.js.map": "/react-season-component-web/static/js/main.3c71cee5.js.map",
-    "787.b44c194f.chunk.js.map": "/react-season-component-web/static/js/787.b44c194f.chunk.js.map"
+    "main.js": "/react-season-component/static/js/main.e94d74d5.js",
+    "index.html": "/react-season-component/index.html",
+    "main.e94d74d5.js.map": "/react-season-component/static/js/main.e94d74d5.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.3c71cee5.js"
+    "static/js/main.e94d74d5.js"
   ]
 }
