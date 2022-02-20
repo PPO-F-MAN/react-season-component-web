@@ -1,11 +1,11 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export interface theme {
-  theme: 'spring' | 'summer' | 'autumn' | 'winter' | 'morning' | 'day' | 'evening' | 'night';
+  currentTheme: 'spring' | 'summer' | 'autumn' | 'winter' | 'morning' | 'day' | 'evening' | 'night';
 }
 
 const initialState: theme = {
-  theme: 'winter',
+  currentTheme: 'winter',
 };
 
 const themeSlice = createSlice({
