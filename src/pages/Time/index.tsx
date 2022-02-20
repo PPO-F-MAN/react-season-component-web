@@ -1,7 +1,19 @@
 import React from 'react';
 import { Time } from 'react-season-component';
+import { CodeBlock, dracula } from 'react-code-blocks';
+
 import * as Styled from './styled';
 import Controller from '../../components/Controller';
+
+const CODE = `// using the atomOneDark theme
+import { CodeBlock, nord} from 'react-code-blocks';
+const MyCodeComponent = () => (
+<CodeBlock
+  text="HELLO WORLD"
+  theme={nord}
+  language="text"
+/>
+)`;
 
 function TimePage() {
   return (
@@ -14,7 +26,9 @@ function TimePage() {
           <Time type="night" animationRoundTime={1} animation="top-to-bottom" background />
         </Styled.Card>
         <Styled.SubTitle>Example Code</Styled.SubTitle>
-        <Styled.CodeContainer>react code</Styled.CodeContainer>
+        <Styled.CodeContainer>
+          <CodeBlock text={CODE} theme={dracula} language="typescript" />
+        </Styled.CodeContainer>
       </Styled.Container>
     </>
   );
