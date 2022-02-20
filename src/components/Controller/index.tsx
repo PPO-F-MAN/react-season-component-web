@@ -1,8 +1,19 @@
 import React from 'react';
-import * as Styled from './styled';
+import { Container, Foreground, Background, ControllerColorType } from './styled';
 
-function Controller({ children }: { children: React.ReactNode }) {
-  return <Styled.Container>{children}</Styled.Container>;
+interface ControllerColorProps {
+  children: React.ReactNode;
+  type: ControllerColorType;
+}
+
+function Controller({ children = null, type }: ControllerColorProps) {
+  return (
+    <Container>
+      <Foreground type={type} />
+      <Background type={type} />
+      {children}
+    </Container>
+  );
 }
 
 export default Controller;
