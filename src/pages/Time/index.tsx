@@ -94,7 +94,7 @@ const MyComponent = () => {
 
   return (
     <>
-      <Sidebar type={type} />
+      <Sidebar type={type} currentPage="Time" />
       <Controller
         type={type}
         width={width}

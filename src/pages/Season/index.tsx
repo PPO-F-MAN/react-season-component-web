@@ -44,7 +44,7 @@ const MyComponent = () => {
 
   return (
     <>
-      <Sidebar type={type} />
+      <Sidebar type={type} currentPage="Season" />
       <Controller
         type={type}
         width={width}
