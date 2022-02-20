@@ -1,7 +1,12 @@
 import React from 'react';
+import SeasonPage from '../../components/SeasonPage';
 
 function Season() {
-  return <div>Season</div>;
+  return (
+    <main>
+      <SeasonPage />
+    </main>
+  );
 }
 
 export default Season;
