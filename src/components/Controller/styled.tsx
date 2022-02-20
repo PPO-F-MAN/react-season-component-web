@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { Slider } from '@mui/material';
 
 export type ControllerColorType =
   | 'spring'
@@ -95,4 +96,57 @@ export const Background = styled.div<{ type: ControllerColorType }>`
     }
   }};
   z-index: 0;
+`;
+
+export const ControllerContentWrapper = styled.div`
+  position: relative;
+  margin-top: 126px;
+  left: 72px;
+  z-index: 2;
+`;
+
+export const CustomVariableContainer = styled.div``;
+
+export const CommonVariables = styled.div`
+  color: #0f0f0f;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+  margin-bottom: 40px;
+`;
+
+export const CardComponentContainer = styled.div``;
+
+export const CardComponentHeader = styled.div`
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 8px;
+`;
+
+export const CardComponentTitle = styled.div``;
+
+export const InputContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 320px;
+  height: 16px;
+  line-height: 16px;
+  margin-top: 14px;
+`;
+
+export const AppSlider = styled(Slider)`
+  width: 197px;
+`;
+
+export const InputProperty = styled.div`
+  font-size: 14px;
+  font-height: 16px;
+  width: 40px;
+`;
+
+export const InputUnit = styled.div`
+  font-size: 14px;
+  line-height: 16px;
 `;
