@@ -1,14 +1,13 @@
 import styled from '@emotion/styled';
+import { TimeTypeProps } from '../../types';
 
 export type SidebarColorType =
+  | 'auto'
   | 'spring'
   | 'summer'
   | 'autumn'
   | 'winter'
-  | 'morning'
-  | 'day'
-  | 'evening'
-  | 'night'
+  | TimeTypeProps
   | 'sunny'
   | 'cloudy'
   | 'rainy'
