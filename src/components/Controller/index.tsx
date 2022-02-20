@@ -4,7 +4,6 @@ import {
   Foreground,
   Background,
   ControllerColorType,
-  ControllerContentWrapper,
   CommonVariables,
   CustomVariableContainer,
   CardComponentContainer,
@@ -38,9 +37,7 @@ function Controller({
 }: ControllerProps) {
   return (
     <Container>
-      <Foreground type={type} />
-      <Background type={type} />
-      <ControllerContentWrapper>
+      <Foreground type={type}>
         <CustomVariableContainer>
           <CommonVariables>Custom Variables</CommonVariables>
           {children}
@@ -74,7 +71,8 @@ function Controller({
             <InputUnit>{height} px</InputUnit>
           </InputContainer>
         </CardComponentContainer>
-      </ControllerContentWrapper>
+      </Foreground>
+      <Background type={type} />
     </Container>
   );
 }
