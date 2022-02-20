@@ -23,5 +23,5 @@ export const Card = styled.div`
 
 export const CodeContainer = styled.code`
   width: 300px;
-  height: 300px;
+  height: 500px;
 `;

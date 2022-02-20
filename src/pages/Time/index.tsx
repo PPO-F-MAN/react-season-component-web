@@ -23,7 +23,7 @@ function TimePage() {
         <Styled.Title>Time</Styled.Title>
         <Styled.SubTitle>Preview</Styled.SubTitle>
         <Styled.Card>
-          <Time type="night" animationRoundTime={1} animation="top-to-bottom" background />
+          <Time type="night" animationRoundTime={5} background />
         </Styled.Card>
         <Styled.SubTitle>Example Code</Styled.SubTitle>
         <Styled.CodeContainer>
