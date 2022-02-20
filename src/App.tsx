@@ -22,7 +22,7 @@ function App() {
         }}
       />
 
-      <BrowserRouter>
+      <BrowserRouter basename='/react-season-component-web'>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/season" element={<Season />} />
