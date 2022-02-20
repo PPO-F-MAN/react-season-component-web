@@ -11,7 +11,7 @@ interface TypeCheckerProps {
 export function TypeChecker({ handleType }: TypeCheckerProps) {
   return (
     <FormControl>
-      <FormLabel id="demo-row-radio-buttons-group-label">Gender</FormLabel>
+      <FormLabel id="demo-row-radio-buttons-group-label">Type</FormLabel>
       <RadioGroup
         row
         aria-labelledby="demo-row-radio-buttons-group-label"

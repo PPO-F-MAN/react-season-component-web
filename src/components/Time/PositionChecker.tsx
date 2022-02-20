@@ -11,7 +11,7 @@ interface PositionCheckerProps {
 export function PositionChecker({ handlePosition }: PositionCheckerProps) {
   return (
     <FormControl>
-      <FormLabel id="demo-row-radio-buttons-group-label">Gender</FormLabel>
+      <FormLabel id="demo-row-radio-buttons-group-label">Animation Position</FormLabel>
       <RadioGroup
         row
         aria-labelledby="demo-row-radio-buttons-group-label"

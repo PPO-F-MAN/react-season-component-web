@@ -10,32 +10,14 @@ import {
   PositionChecker,
   TypeChecker,
 } from '../../components/Time';
-
-type TypeProps = 'auto' | 'morning' | 'day' | 'evening' | 'night';
-
-type ImagePositionProps =
-  | 'left-top'
-  | 'left-center'
-  | 'left-bottom'
-  | 'right-top'
-  | 'right-center'
-  | 'right-bottom'
-  | 'center-top'
-  | 'center-center'
-  | 'center-bottom';
-
-type AnimationProps =
-  | 'left-to-right'
-  | 'right-to-left'
-  | 'top-to-bottom'
-  | 'bottom-to-top'
-  | 'round';
+import { AnimationProps, ImagePositionProps, TimeTypeProps } from '../../types';
+import { Sidebar } from '../../components';
 
 function TimePage() {
   const [width, setWidth] = useState<number>(500);
   const [height, setHeight] = useState<number>(360);
 
-  const [type, setType] = useState<TypeProps>('auto');
+  const [type, setType] = useState<TimeTypeProps>('auto');
   const [animation, setAnimation] = useState<AnimationProps>('left-to-right');
   const [imagePosition, setImagePosition] = useState<ImagePositionProps>('left-top');
   const [background, setBackground] = useState<boolean>(true);
@@ -56,6 +38,13 @@ function TimePage() {
     setBackground(e.target.value === 'true');
   };
 
+  const handleWidth = (e: any) => {
+    setWidth(e.target.value);
+  };
+
+  const handleHeight = (e: any) => {
+    setHeight(e.target.value);
+  };
   const CODE = `import { Time } from 'react-season-component';
 import styled from 'styled-components';
 
@@ -80,7 +69,14 @@ const MyComponent = () => {
 
   return (
     <>
-      <Controller type="time">
+      <Sidebar type={type} />
+      <Controller
+        type={type}
+        width={width}
+        height={height}
+        onChangeWidth={handleWidth}
+        onChangeHeight={handleHeight}
+      >
         <TypeChecker handleType={handleType} />
         <PositionChecker handlePosition={handlePosition} />
         <MovingChecker handleAnimation={handleAnimation} />

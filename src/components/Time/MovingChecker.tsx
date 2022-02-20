@@ -11,7 +11,7 @@ interface MovingCheckerProps {
 export function MovingChecker({ handleAnimation }: MovingCheckerProps) {
   return (
     <FormControl>
-      <FormLabel id="demo-row-radio-buttons-group-label">Gender</FormLabel>
+      <FormLabel id="demo-row-radio-buttons-group-label">Animation Moving</FormLabel>
       <RadioGroup
         row
         aria-labelledby="demo-row-radio-buttons-group-label"

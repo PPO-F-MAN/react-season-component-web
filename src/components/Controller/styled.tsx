@@ -1,15 +1,14 @@
 import styled from '@emotion/styled';
 import { Slider } from '@mui/material';
+import { TimeTypeProps } from '../../types';
 
 export type ControllerColorType =
+  | 'auto'
   | 'spring'
   | 'summer'
   | 'autumn'
   | 'winter'
-  | 'morning'
-  | 'day'
-  | 'evening'
-  | 'night'
+  | TimeTypeProps
   | 'sunny'
   | 'cloudy'
   | 'rainy'
@@ -21,10 +20,15 @@ export const Container = styled.div`
   right: 0;
   width: 580px;
   height: 780px;
+  z-index: 100;
 `;
 
 export const Foreground = styled.div<{ type: ControllerColorType }>`
   position: absolute;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   top: 30px;
   left: 0;
   width: 550px;
@@ -59,6 +63,9 @@ export const Foreground = styled.div<{ type: ControllerColorType }>`
   height: 750px;
   border-radius: 50px 50px 0px 300px;
   z-index: 1;
+  & > * {
+    margin-bottom: 20px;
+  }
 `;
 
 export const Background = styled.div<{ type: ControllerColorType }>`
@@ -96,13 +103,6 @@ export const Background = styled.div<{ type: ControllerColorType }>`
     }
   }};
   z-index: 0;
-`;
-
-export const ControllerContentWrapper = styled.div`
-  position: relative;
-  margin-top: 126px;
-  left: 72px;
-  z-index: 2;
 `;
 
 export const CustomVariableContainer = styled.div``;
