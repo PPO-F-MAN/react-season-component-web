@@ -16,6 +16,9 @@ export type SidebarColorType =
 
 export const Container = styled.div<{ type: SidebarColorType }>`
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   top: 0;
   left: 0;
   width: 100px;
@@ -48,4 +51,18 @@ export const Container = styled.div<{ type: SidebarColorType }>`
         return '#4B728B';
     }
   }};
+`;
+
+// TODO: Logo,
+// ButtonGroup,
+// HomeButton,
+// TimeButton,
+// SeasonButton,
+// WeatherButton,
+// SlidingPointer,
+
+export const Logo = styled.div`
+  background-image: url('react-season-component-logo.png');
+  width: 100px;
+  height: 100px;
 `;
