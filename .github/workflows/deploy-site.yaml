@@ -12,18 +12,18 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14.x
+      - name: git config
+        env:
+          USER_NAME: ${{ github.event.pusher.name }}
+          USER_EMAIL: ${{ github.event.pusher.email }}
+        run: |
+          git config --global user.email "$USER_EMAIL"
+          git config --global user.name "$USER_NAME"
       - name: Install packages
         run: npm install
       - name: Prettier
         run: npm run prettier
       - name: ESLint
         run: npm run lint
-      - name: git config
-      env:
-        USER_NAME: ${{ github.event.pusher.name }}
-        USER_EMAIL: ${{ github.event.pusher.email }}
-      run: |
-        git config --global user.email "$USER_EMAIL"
-        git config --global user.name "$USER_NAME"
       - name: deploy
         run: npm run deploy
