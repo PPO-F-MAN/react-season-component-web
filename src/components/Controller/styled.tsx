@@ -51,7 +51,7 @@ export const Foreground = styled.div<{ type: ControllerColorType }>`
         return '#FBE6F8';
       case 'rainy':
         return '#83BDD1';
-      case 'snowy':
+      default:
         return '#92B7D4';
     }
   }};
