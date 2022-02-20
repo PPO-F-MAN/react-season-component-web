@@ -142,7 +142,7 @@ export const AppSlider = styled(Slider)`
 
 export const InputProperty = styled.div`
   font-size: 14px;
-  font-height: 16px;
+  line-height: 16px;
   width: 40px;
 `;
 

@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from '@emotion/styled';
 import { TimeTypeProps } from '../../types';
 
@@ -18,10 +19,12 @@ export const Container = styled.div<{ type: SidebarColorType }>`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   top: 0;
   left: 0;
   width: 100px;
   height: 100vh;
+  z-index: 1000;
   background-color: ${({ type }) => {
     switch (type) {
       case 'spring':
@@ -62,6 +65,66 @@ export const Container = styled.div<{ type: SidebarColorType }>`
 
 export const Logo = styled.div`
   background-image: url('react-season-component-logo.png');
-  width: 100px;
-  height: 100px;
+  background-size: cover;
+  width: 80px;
+  height: 80px;
+  margin-top: 10px;
 `;
+
+export const ButtonGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const HomeButton = styled.div`
+  background-image: url('home_light.png');
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  margin-top: 35px;
+  margin-bottom: 35px;
+`;
+
+export const TimeButton = styled.div`
+  background-image: url('time_light.png');
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  margin-top: 35px;
+  margin-bottom: 35px;
+`;
+
+export const SeasonButton = styled.div`
+  background-image: url('season_light.png');
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  margin-top: 35px;
+  margin-bottom: 35px;
+`;
+
+export const WeatherButton = styled.div`
+  background-image: url('weather_light.png');
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  margin-top: 35px;
+  margin-bottom: 35px;
+`;
+
+export const ForMargin = styled.div`
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+`;
+
+export const SlidingPointer = styled.div`
+  background-image: url('sliding_pointer.png');
+  background-size: cover;
+  width: 80px;
+  height: 100px;
+  margin-left: 20px;
+`;
+
+export const Nav = styled.div``;
