@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { GlobalStyles } from '@mui/material';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
 import Sidebar from './components/Sidebar';
 import { Home, Season, Time, Weather } from './pages';
 
@@ -14,6 +14,13 @@ const Container = styled.div`
 function App() {
   return (
     <Container>
+      <GlobalStyles
+        styles={{
+          body: {
+            fontFamily: 'Proxima, Nova, sans-serif, "Segoe UI", Roboto',
+          },
+        }}
+      />
       <Sidebar />
 
       <BrowserRouter basename={process.env.PUBLIC_URL}>
