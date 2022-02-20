@@ -29,32 +29,46 @@ function TimePage() {
   const [background, setBackground] = useState<boolean>(true);
   const [duration, setDuration] = useState<number>(10);
 
-  const handlePosition = (e: any) => {
-    setImagePosition(e.target.value);
+  const handlePosition = (e: React.FormEvent<HTMLInputElement>) => {
+    const target = e.target as HTMLInputElement;
+    const value = target.value as ImagePositionProps;
+    setImagePosition(value);
   };
 
-  const handleAnimation = (e: any) => {
-    setAnimation(e.target.value);
+  const handleAnimation = (e: React.FormEvent<HTMLInputElement>) => {
+    const target = e.target as HTMLInputElement;
+    const value = target.value as AnimationProps;
+    setAnimation(value);
   };
 
-  const handleType = (e: any) => {
-    setType(e.target.value);
+  const handleType = (e: React.FormEvent<HTMLInputElement>) => {
+    const target = e.target as HTMLInputElement;
+    const value = target.value as TimeTypeProps;
+    setType(value);
   };
 
-  const handleBackground = (e: any) => {
-    setBackground(e.target.value === 'true');
+  const handleBackground = (e: React.FormEvent<HTMLInputElement>) => {
+    const target = e.target as HTMLInputElement;
+    const value = target.value as string;
+    setBackground(value === 'true');
   };
 
-  const handleWidth = (e: any) => {
-    setWidth(e.target.value);
+  const handleWidth = (e: Event) => {
+    const target = e.target as HTMLInputElement;
+    const value = target.value as string;
+    setWidth(+value);
   };
 
-  const handleHeight = (e: any) => {
-    setHeight(e.target.value);
+  const handleHeight = (e: Event) => {
+    const target = e.target as HTMLInputElement;
+    const value = target.value as string;
+    setHeight(+value);
   };
 
-  const handleDuration = (e: any) => {
-    setDuration(e.target.value);
+  const handleDuration = (e: Event) => {
+    const target = e.target as HTMLInputElement;
+    const value = target.value as string;
+    setDuration(+value);
   };
   const CODE = `import { Time } from 'react-season-component';
 import styled from 'styled-components';
@@ -93,7 +107,7 @@ const MyComponent = () => {
         <MovingChecker handleAnimation={handleAnimation} />
         <BackgroundChecker handleBackground={handleBackground} />
         <InputContainer>
-          <InputProperty>Height</InputProperty>
+          <InputProperty>Animation Duration</InputProperty>
           <AppSlider
             size="small"
             defaultValue={duration}
