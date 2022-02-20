@@ -6,7 +6,7 @@ export const Container = styled.section`
   align-items: center;
   flex-direction: column;
   width: 100%;
-  heigth: 100%;
+  height: 100%;
 `;
 
 export const SeasonViewWrapper = styled.section`
@@ -14,14 +14,17 @@ export const SeasonViewWrapper = styled.section`
   height: 600px;
 `;
 
-export const CodeViewer = styled.section`
+export const CodeContainer = styled.code`
   width: 900px;
   height: 600px;
 `;
 
 export const ButtonWrapper = styled.div`
-  color: white;
+  display: block;
+  position: absolute;
+  z-index: 9999;
+  color: black;
   & > div {
-    color: white;
+    color: black;
   }
 `;

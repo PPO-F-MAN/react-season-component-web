@@ -6,7 +6,7 @@ import Controller from '../../components/Controller';
 function TimePage() {
   return (
     <>
-      <Controller>dd</Controller>
+      <Controller type="time">dd</Controller>
       <Styled.Container>
         <Styled.Title>Time</Styled.Title>
         <Styled.SubTitle>Preview</Styled.SubTitle>

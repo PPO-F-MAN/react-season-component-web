@@ -1,8 +1,9 @@
 import React, { useCallback, useState } from 'react';
-import { Season as SeasonComponent } from 'react-season-component';
+import { CodeBlock, dracula } from 'react-code-blocks';
+import { Season } from 'react-season-component';
 import { Button, ButtonGroup } from '@mui/material';
 import Controller from '../../components/Controller';
-import { Container, ButtonWrapper, SeasonViewWrapper, CodeViewer } from './styled';
+import { Container, ButtonWrapper, SeasonViewWrapper, CodeContainer } from './styled';
 
 const TYPES = ['auto', 'spring', 'summer', 'autumn', 'winter'];
 
@@ -17,15 +18,17 @@ function SeasonPage() {
     [type],
   );
 
+  const CODE = `<SeasonComponent type=${type}></SeasonComponent>`;
+
   return (
     <Container>
       <SeasonViewWrapper>
-        <SeasonComponent type={type}>{type}</SeasonComponent>
+        <Season type={type} />
       </SeasonViewWrapper>
-      <CodeViewer>
-        <code>{`<SeasonComponent type=${type}></SeasonComponent>`}</code>
-      </CodeViewer>
-      <Controller>
+      <CodeContainer>
+        <CodeBlock text={CODE} theme={dracula} language="typescript" />
+      </CodeContainer>
+      <Controller type="season">
         <ButtonWrapper>
           <h1>Custom Variables</h1>
           <p>Season Component</p>
