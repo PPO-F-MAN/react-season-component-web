@@ -31,7 +31,7 @@ function WeatherPage() {
 
   return (
     <Main>
-      <Sidebar type="cloudy" />
+      <Sidebar type="cloudy" currentPage="Weather" />
       <Controller
         type="cloudy"
         width={width}

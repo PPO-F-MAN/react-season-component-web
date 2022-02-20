@@ -77,8 +77,9 @@ export const ButtonGroup = styled.div`
   align-items: center;
 `;
 
-export const HomeButton = styled.div`
-  background-image: url('home_light.png');
+export const HomeButton = styled.div<{ isDark: boolean }>`
+  position: relative;
+  background-image: url(${({ isDark }) => (isDark ? 'home_dark.png' : 'home_light.png')});
   background-size: cover;
   width: 30px;
   height: 30px;
@@ -86,8 +87,9 @@ export const HomeButton = styled.div`
   margin-bottom: 35px;
 `;
 
-export const TimeButton = styled.div`
-  background-image: url('time_light.png');
+export const TimeButton = styled.div<{ isDark: boolean }>`
+  position: relative;
+  background-image: url(${({ isDark }) => (isDark ? 'time_dark.png' : 'time_light.png')});
   background-size: cover;
   width: 30px;
   height: 30px;
@@ -95,8 +97,9 @@ export const TimeButton = styled.div`
   margin-bottom: 35px;
 `;
 
-export const SeasonButton = styled.div`
-  background-image: url('season_light.png');
+export const SeasonButton = styled.div<{ isDark: boolean }>`
+  position: relative;
+  background-image: url(${({ isDark }) => (isDark ? 'season_dark.png' : 'season_light.png')});
   background-size: cover;
   width: 30px;
   height: 30px;
@@ -104,8 +107,9 @@ export const SeasonButton = styled.div`
   margin-bottom: 35px;
 `;
 
-export const WeatherButton = styled.div`
-  background-image: url('weather_light.png');
+export const WeatherButton = styled.div<{ isDark: boolean }>`
+  position: relative;
+  background-image: url(${({ isDark }) => (isDark ? 'weather_dark.png' : 'weather_light.png')});
   background-size: cover;
   width: 30px;
   height: 30px;
@@ -119,12 +123,25 @@ export const ForMargin = styled.div`
   margin-bottom: 10px;
 `;
 
-export const SlidingPointer = styled.div`
+export const SlidingPointer = styled.div<{ page: 'Home' | 'Time' | 'Season' | 'Weather' }>`
+  position: relative;
   background-image: url('sliding_pointer.png');
   background-size: cover;
   width: 80px;
   height: 100px;
   margin-left: 20px;
+  top: ${({ page }) => {
+    switch (page) {
+      case 'Home':
+        return '100px';
+      case 'Time':
+        return '200px';
+      case 'Season':
+        return '300px';
+      default:
+        return '400px';
+    }
+  }};
 `;
 
 export const Nav = styled.div``;

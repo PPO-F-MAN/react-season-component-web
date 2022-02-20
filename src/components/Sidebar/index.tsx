@@ -16,30 +16,29 @@ import {
 
 interface SidebarColorProps {
   type: SidebarColorType;
+  currentPage: 'Home' | 'Time' | 'Season' | 'Weather';
 }
 
-function Sidebar({ type }: SidebarColorProps) {
+function Sidebar({ type, currentPage }: SidebarColorProps) {
   return (
     <Container type={type}>
       <Logo />
       <Nav>
+        <SlidingPointer page={currentPage} />
         <ButtonGroup>
           <Link to="/">
-            <HomeButton />
+            <HomeButton isDark={currentPage === 'Home'} />
           </Link>
           <Link to="/time">
-            <TimeButton />
+            <TimeButton isDark={currentPage === 'Time'} />
           </Link>
           <Link to="/season">
-            <SeasonButton />
+            <SeasonButton isDark={currentPage === 'Season'} />
           </Link>
           <Link to="/weather">
-            <WeatherButton />
+            <WeatherButton isDark={currentPage === 'Weather'} />
           </Link>
         </ButtonGroup>
-        <div>
-          <SlidingPointer />
-        </div>
       </Nav>
       <ForMargin />
     </Container>
