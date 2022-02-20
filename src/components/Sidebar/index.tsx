@@ -1,8 +1,12 @@
 import React from 'react';
-import * as Styled from './styled';
+import { Container, SidebarColorType } from './styled';
 
-function Sidebar() {
-  return <Styled.Container />;
+interface SidebarColorProps {
+  type: SidebarColorType;
+}
+
+function Sidebar({ type }: SidebarColorProps) {
+  return <Container type={type} />;
 }
 
 export default Sidebar;
