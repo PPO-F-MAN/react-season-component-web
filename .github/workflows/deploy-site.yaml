@@ -22,12 +22,6 @@ jobs:
       - name: ESLint
         run: npm run lint
 
-      # - name: deploy
-      #   run: npm run deploy
-
-      # 6. gh-pages로 배포
-      - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+      - name: deploy
+        run: npm run deploy
+        
