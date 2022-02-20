@@ -25,7 +25,7 @@ function SeasonPage() {
       <CodeViewer>
         <code>{`<SeasonComponent type=${type}></SeasonComponent>`}</code>
       </CodeViewer>
-      <Controller>
+      <Controller type="season">
         <ButtonWrapper>
           <h1>Custom Variables</h1>
           <p>Season Component</p>
