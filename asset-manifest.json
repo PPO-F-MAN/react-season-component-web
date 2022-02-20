@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/react-season-component/static/js/main.e94d74d5.js",
-    "index.html": "/react-season-component/index.html",
-    "main.e94d74d5.js.map": "/react-season-component/static/js/main.e94d74d5.js.map"
+    "main.js": "/react-season-component-web/static/js/main.d9f5cf13.js",
+    "index.html": "/react-season-component-web/index.html",
+    "main.d9f5cf13.js.map": "/react-season-component-web/static/js/main.d9f5cf13.js.map"
   },
   "entrypoints": [
-    "static/js/main.e94d74d5.js"
+    "static/js/main.d9f5cf13.js"
   ]
 }
