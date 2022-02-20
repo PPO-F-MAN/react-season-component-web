@@ -20,7 +20,7 @@ export const Container = styled.div`
   right: 0;
   width: 580px;
   height: 780px;
-  z-index: 100;
+  z-index: 999;
 `;
 
 export const Foreground = styled.div<{ type: ControllerColorType }>`
