@@ -3,7 +3,7 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import themeSlice from './features/theme';
 
 const rootReducer = combineReducers({
-  user: themeSlice.reducer,
+  theme: themeSlice.reducer,
 });
 
 const store = configureStore({
