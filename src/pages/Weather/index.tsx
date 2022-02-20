@@ -108,7 +108,7 @@ const MyComponent = () => {
 
   return (
     <Main>
-      <Sidebar type="cloudy" currentPage="Weather" />
+      <Sidebar type={type} />
       <Controller
         type={type}
         width={width}
