@@ -12,6 +12,12 @@ import {
 } from '../../components/Time';
 import { AnimationProps, ImagePositionProps, TimeTypeProps } from '../../types';
 import { Sidebar } from '../../components';
+import {
+  AppSlider,
+  InputContainer,
+  InputProperty,
+  InputUnit,
+} from '../../components/Controller/styled';
 
 function TimePage() {
   const [width, setWidth] = useState<number>(500);
@@ -21,29 +27,48 @@ function TimePage() {
   const [animation, setAnimation] = useState<AnimationProps>('left-to-right');
   const [imagePosition, setImagePosition] = useState<ImagePositionProps>('left-top');
   const [background, setBackground] = useState<boolean>(true);
+  const [duration, setDuration] = useState<number>(10);
 
-  const handlePosition = (e: any) => {
-    setImagePosition(e.target.value);
+  const handlePosition = (e: React.FormEvent<HTMLInputElement>) => {
+    const target = e.target as HTMLInputElement;
+    const value = target.value as ImagePositionProps;
+    setImagePosition(value);
   };
 
-  const handleAnimation = (e: any) => {
-    setAnimation(e.target.value);
+  const handleAnimation = (e: React.FormEvent<HTMLInputElement>) => {
+    const target = e.target as HTMLInputElement;
+    const value = target.value as AnimationProps;
+    setAnimation(value);
   };
 
-  const handleType = (e: any) => {
-    setType(e.target.value);
+  const handleType = (e: React.FormEvent<HTMLInputElement>) => {
+    const target = e.target as HTMLInputElement;
+    const value = target.value as TimeTypeProps;
+    setType(value);
   };
 
-  const handleBackground = (e: any) => {
-    setBackground(e.target.value === 'true');
+  const handleBackground = (e: React.FormEvent<HTMLInputElement>) => {
+    const target = e.target as HTMLInputElement;
+    const value = target.value as string;
+    setBackground(value === 'true');
   };
 
-  const handleWidth = (e: any) => {
-    setWidth(e.target.value);
+  const handleWidth = (e: Event) => {
+    const target = e.target as HTMLInputElement;
+    const value = target.value as string;
+    setWidth(+value);
   };
 
-  const handleHeight = (e: any) => {
-    setHeight(e.target.value);
+  const handleHeight = (e: Event) => {
+    const target = e.target as HTMLInputElement;
+    const value = target.value as string;
+    setHeight(+value);
+  };
+
+  const handleDuration = (e: Event) => {
+    const target = e.target as HTMLInputElement;
+    const value = target.value as string;
+    setDuration(+value);
   };
   const CODE = `import { Time } from 'react-season-component';
 import styled from 'styled-components';
@@ -57,10 +82,10 @@ const MyComponent = () => {
   return (
      <Card>
        <Time
-         type="night"
-         animation="top-to-bottom"
-         animationRoundTime={5}
-         background
+         type="${type}"
+         animation="${animation}"
+         animationRoundTime={${duration}}
+         background={${background}}
        />
      </Card>
   );
@@ -81,6 +106,19 @@ const MyComponent = () => {
         <PositionChecker handlePosition={handlePosition} />
         <MovingChecker handleAnimation={handleAnimation} />
         <BackgroundChecker handleBackground={handleBackground} />
+        <InputContainer>
+          <InputProperty>Animation Duration</InputProperty>
+          <AppSlider
+            size="small"
+            defaultValue={duration}
+            aria-label="Small"
+            valueLabelDisplay="auto"
+            min={5}
+            max={20}
+            onChange={handleDuration}
+          />
+          <InputUnit>{duration} px</InputUnit>
+        </InputContainer>
       </Controller>
 
       <Styled.Container>
