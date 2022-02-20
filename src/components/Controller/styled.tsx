@@ -90,7 +90,7 @@ export const Background = styled.div<{ type: ControllerColorType }>`
         return '#ffd3f8';
       case 'rainy':
         return '#a9cdda';
-      case 'snowy':
+      default:
         return '#b9cedf';
     }
   }};
