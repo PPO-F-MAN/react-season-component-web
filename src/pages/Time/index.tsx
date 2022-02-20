@@ -12,6 +12,12 @@ import {
 } from '../../components/Time';
 import { AnimationProps, ImagePositionProps, TimeTypeProps } from '../../types';
 import { Sidebar } from '../../components';
+import {
+  AppSlider,
+  InputContainer,
+  InputProperty,
+  InputUnit,
+} from '../../components/Controller/styled';
 
 function TimePage() {
   const [width, setWidth] = useState<number>(500);
@@ -21,6 +27,7 @@ function TimePage() {
   const [animation, setAnimation] = useState<AnimationProps>('left-to-right');
   const [imagePosition, setImagePosition] = useState<ImagePositionProps>('left-top');
   const [background, setBackground] = useState<boolean>(true);
+  const [duration, setDuration] = useState<number>(10);
 
   const handlePosition = (e: any) => {
     setImagePosition(e.target.value);
@@ -45,6 +52,10 @@ function TimePage() {
   const handleHeight = (e: any) => {
     setHeight(e.target.value);
   };
+
+  const handleDuration = (e: any) => {
+    setDuration(e.target.value);
+  };
   const CODE = `import { Time } from 'react-season-component';
 import styled from 'styled-components';
 
@@ -57,10 +68,10 @@ const MyComponent = () => {
   return (
      <Card>
        <Time
-         type="night"
-         animation="top-to-bottom"
-         animationRoundTime={5}
-         background
+         type="${type}"
+         animation="${animation}"
+         animationRoundTime={${duration}}
+         background={${background}}
        />
      </Card>
   );
@@ -81,6 +92,19 @@ const MyComponent = () => {
         <PositionChecker handlePosition={handlePosition} />
         <MovingChecker handleAnimation={handleAnimation} />
         <BackgroundChecker handleBackground={handleBackground} />
+        <InputContainer>
+          <InputProperty>Height</InputProperty>
+          <AppSlider
+            size="small"
+            defaultValue={duration}
+            aria-label="Small"
+            valueLabelDisplay="auto"
+            min={5}
+            max={20}
+            onChange={handleDuration}
+          />
+          <InputUnit>{duration} px</InputUnit>
+        </InputContainer>
       </Controller>
 
       <Styled.Container>
