@@ -1,20 +1,23 @@
 import React from 'react';
+import { Time } from 'react-season-component';
 import * as Styled from './styled';
 import Controller from '../../components/Controller';
 
-function Time() {
+function TimePage() {
   return (
     <>
       <Controller>dd</Controller>
       <Styled.Container>
         <Styled.Title>Time</Styled.Title>
         <Styled.SubTitle>Preview</Styled.SubTitle>
-        <Styled.Card />
+        <Styled.Card>
+          <Time type="night" animationRoundTime={1} animation="top-to-bottom" background />
+        </Styled.Card>
         <Styled.SubTitle>Example Code</Styled.SubTitle>
-        <Styled.CodeContainer />
+        <Styled.CodeContainer>react code</Styled.CodeContainer>
       </Styled.Container>
     </>
   );
 }
 
-export default Time;
+export default TimePage;
