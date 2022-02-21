@@ -31,7 +31,10 @@ export const Card = styled.div<CardProps>`
   height: ${props => props.height}px;
 `;
 
-export const CodeContainer = styled.code``;
+export const CodeContainer = styled.code`
+  display: block;
+  width: 60%;
+`;
 
 export const AppWeather = styled(Weather)<{ visible: boolean }>`
   position: absolute !important;
