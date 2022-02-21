@@ -155,9 +155,11 @@ export const WeatherButton = styled.div<{ isDark: boolean }>`
 `;
 
 export const ForMargin = styled.div`
-  width: 80px;
-  height: 80px;
-  margin-bottom: 10px;
+  background-image: url('${process.env.PUBLIC_URL}/logo_github.png');
+  background-size: cover;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 40px;
 `;
 
 export const SlidingPointer = styled.div<{ page: 'Home' | 'Time' | 'Season' | 'Weather' }>`
