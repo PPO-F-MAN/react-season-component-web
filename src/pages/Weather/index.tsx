@@ -2,7 +2,7 @@
 import Radio from '@mui/material/Radio';
 import React, { useState } from 'react';
 import { Weather } from 'react-season-component';
-import { CodeBlock, dracula } from 'react-code-blocks';
+import { CopyBlock, dracula } from 'react-code-blocks';
 import { Controller, Sidebar } from '../../components';
 import { Main, Container, Title, SubTitle, Card, CodeContainer, AppWeather } from './styled';
 
@@ -130,7 +130,7 @@ const MyComponent = () => {
         </Card>
         <SubTitle>Example Code</SubTitle>
         <CodeContainer>
-          <CodeBlock theme={dracula} text={CODE} language="jsx" />
+          <CopyBlock theme={dracula} text={CODE} language="jsx" />
         </CodeContainer>
       </Container>
     </Main>

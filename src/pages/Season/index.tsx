@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CodeBlock, dracula } from 'react-code-blocks';
+import { CopyBlock, dracula } from 'react-code-blocks';
 import { Season } from 'react-season-component';
 import Controller from '../../components/Controller';
 import * as Styled from './styled';
@@ -63,7 +63,7 @@ const MyComponent = () => {
         </Styled.Card>
         <Styled.SubTitle>Example Code</Styled.SubTitle>
         <Styled.CodeContainer>
-          <CodeBlock theme={dracula} text={CODE} language="jsx" />
+          <CopyBlock theme={dracula} text={CODE} language="jsx" />
         </Styled.CodeContainer>
       </Styled.Container>
     </>
