@@ -5,7 +5,6 @@ function Home() {
   return (
     <div>
       <Sidebar type="auto" currentPage="Home" />
-      Home
     </div>
   );
 }
