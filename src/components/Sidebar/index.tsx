@@ -22,7 +22,9 @@ interface SidebarColorProps {
 function Sidebar({ type, currentPage }: SidebarColorProps) {
   return (
     <Container type={type}>
-      <Logo />
+      <Link to="/">
+        <Logo />
+      </Link>
       <Nav>
         <SlidingPointer page={currentPage} />
         <ButtonGroup>
@@ -40,7 +42,9 @@ function Sidebar({ type, currentPage }: SidebarColorProps) {
           </Link>
         </ButtonGroup>
       </Nav>
-      <ForMargin />
+      <a href="https://github.com/PPO-F-MAN/react-season-component">
+        <ForMargin />
+      </a>
     </Container>
   );
 }
