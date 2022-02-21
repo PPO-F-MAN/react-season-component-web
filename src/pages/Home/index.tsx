@@ -3,9 +3,10 @@ import { Sidebar } from '../../components';
 
 function Home() {
   return (
-    <div>
+    <>
       <Sidebar type="auto" currentPage="Home" />
-    </div>
+      <div />
+    </>
   );
 }
 
