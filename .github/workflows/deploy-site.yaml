@@ -24,4 +24,7 @@ jobs:
 
       - name: deploy
         run: npm run deploy
-
+        env:
+          CI: false
+          github_token: ${{ secrets.ACTION_SECRET_DEPLOY }}
+          repository: ${{ github.repository }}
