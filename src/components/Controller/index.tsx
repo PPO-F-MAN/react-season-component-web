@@ -39,8 +39,9 @@ function Controller({
   return (
     <Container>
       <Foreground type={type}>
-        {type === 'home' ? <SnowFlake /> 
-        : (
+        {type === 'home' ? (
+          <SnowFlake />
+        ) : (
           <>
             <CustomVariableContainer>
               <CommonVariables>Custom Variables</CommonVariables>
