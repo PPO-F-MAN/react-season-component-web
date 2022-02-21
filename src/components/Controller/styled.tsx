@@ -12,7 +12,8 @@ export type ControllerColorType =
   | 'sunny'
   | 'cloudy'
   | 'rainy'
-  | 'snowy';
+  | 'snowy'
+  | 'home';
 
 export const Container = styled.div`
   position: fixed;
@@ -32,7 +33,7 @@ export const Foreground = styled.div<{ type: ControllerColorType }>`
   top: 30px;
   left: 0;
   width: 550px;
-  background-color: ${({ type }) => {
+  background: ${({ type }) => {
     switch (type) {
       case 'spring':
         return '#FFF9F3';
@@ -56,6 +57,8 @@ export const Foreground = styled.div<{ type: ControllerColorType }>`
         return '#FBE6F8';
       case 'rainy':
         return '#83BDD1';
+    case 'home':
+        return 'linear-gradient(180deg, #FFFFFF 0%, #FFE7F4 38.02%, #BBC0E5 100%)';
       default:
         return '#92B7D4';
     }
@@ -98,6 +101,8 @@ export const Background = styled.div<{ type: ControllerColorType }>`
         return '#ffd3f8';
       case 'rainy':
         return '#a9cdda';
+      case 'home':
+        return '#FFE7F5';
       default:
         return '#b9cedf';
     }
@@ -149,4 +154,15 @@ export const InputProperty = styled.div`
 export const InputUnit = styled.div`
   font-size: 14px;
   line-height: 16px;
+`;
+
+export const SnowFlake = styled.div`
+  background-image: url("${process.env.PUBLIC_URL}/snowflake-group.png");
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: 400px;
+  margin-top: 300px;
+  margin-left: 160px;
 `;

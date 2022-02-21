@@ -12,19 +12,20 @@ import {
   InputContainer,
   InputProperty,
   InputUnit,
+  SnowFlake,
 } from './styled';
 
 export interface ControllerProps {
-  children: React.ReactNode;
   type: ControllerColorType;
+  children?: React.ReactNode;
   // 현재 너비
-  width: number;
+  width?: number;
   // 현재 높이
-  height: number;
+  height?: number;
   // 너비 변경 핸들러
-  onChangeWidth: (event: Event, value: number | number[]) => void;
+  onChangeWidth?: (event: Event, value: number | number[]) => void;
   // 높이 변경 핸들러
-  onChangeHeight: (event: Event, value: number | number[]) => void;
+  onChangeHeight?: (event: Event, value: number | number[]) => void;
 }
 
 function Controller({
@@ -38,39 +39,45 @@ function Controller({
   return (
     <Container>
       <Foreground type={type}>
-        <CustomVariableContainer>
-          <CommonVariables>Custom Variables</CommonVariables>
-          {children}
-        </CustomVariableContainer>
-        <CardComponentContainer>
-          <CardComponentHeader>Card Component</CardComponentHeader>
-          <InputContainer>
-            <InputProperty>Width</InputProperty>
-            <AppSlider
-              size="small"
-              defaultValue={width}
-              aria-label="Small"
-              valueLabelDisplay="auto"
-              min={200}
-              max={900}
-              onChange={onChangeWidth}
-            />
-            <InputUnit>{width} px</InputUnit>
-          </InputContainer>
-          <InputContainer>
-            <InputProperty>Height</InputProperty>
-            <AppSlider
-              size="small"
-              defaultValue={height}
-              aria-label="Small"
-              valueLabelDisplay="auto"
-              min={200}
-              max={600}
-              onChange={onChangeHeight}
-            />
-            <InputUnit>{height} px</InputUnit>
-          </InputContainer>
-        </CardComponentContainer>
+        {type === 'home' ? <SnowFlake /> 
+        : (
+          <>
+            <CustomVariableContainer>
+              <CommonVariables>Custom Variables</CommonVariables>
+              {children}
+            </CustomVariableContainer>
+
+            <CardComponentContainer>
+              <CardComponentHeader>Card Component</CardComponentHeader>
+              <InputContainer>
+                <InputProperty>Width</InputProperty>
+                <AppSlider
+                  size="small"
+                  defaultValue={width}
+                  aria-label="Small"
+                  valueLabelDisplay="auto"
+                  min={200}
+                  max={900}
+                  onChange={onChangeWidth}
+                />
+                <InputUnit>{width} px</InputUnit>
+              </InputContainer>
+              <InputContainer>
+                <InputProperty>Height</InputProperty>
+                <AppSlider
+                  size="small"
+                  defaultValue={height}
+                  aria-label="Small"
+                  valueLabelDisplay="auto"
+                  min={200}
+                  max={600}
+                  onChange={onChangeHeight}
+                />
+                <InputUnit>{height} px</InputUnit>
+              </InputContainer>
+            </CardComponentContainer>
+          </>
+        )}
       </Foreground>
       <Background type={type} />
     </Container>

@@ -12,7 +12,8 @@ export type SidebarColorType =
   | 'sunny'
   | 'cloudy'
   | 'rainy'
-  | 'snowy';
+  | 'snowy'
+  | 'home';
 
 export const Container = styled.div<{ type: SidebarColorType }>`
   position: fixed;
@@ -49,6 +50,8 @@ export const Container = styled.div<{ type: SidebarColorType }>`
         return '#F8E7F8';
       case 'rainy':
         return '#142374';
+      case 'home':
+        return '#BFC3E6';
       default:
         return '#4B728B';
     }
