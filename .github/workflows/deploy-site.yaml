@@ -30,5 +30,7 @@ jobs:
           npm run deploy
         env:
           CI: false
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
           github_token: ${{ secrets.ACTION_SECRET_DEPLOY }}
           repository: ${{ github.repository }}
