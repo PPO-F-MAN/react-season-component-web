@@ -20,7 +20,7 @@ export const Container = styled.div`
   right: 0;
   width: 580px;
   height: 780px;
-  z-index: 100;
+  z-index: 999;
 `;
 
 export const Foreground = styled.div<{ type: ControllerColorType }>`
@@ -142,7 +142,7 @@ export const AppSlider = styled(Slider)`
 
 export const InputProperty = styled.div`
   font-size: 14px;
-  font-height: 16px;
+  line-height: 16px;
   width: 40px;
 `;
 
