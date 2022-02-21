@@ -3,8 +3,6 @@ import { Weather } from 'react-season-component';
 
 export const Main = styled.main`
   position: relative;
-  height: 100%;
-  padding-left: 100px;
 `;
 
 export const Container = styled.div`
