@@ -14,13 +14,16 @@ export const Title = styled.p`
 `;
 
 export const Content = styled.div`
-  font-size: 28px;
+  font-size: 20px;
+  color: #a6a6a6;
+  font-weight: 700;
   width: 60%;
 `;
 
 export const SubTitle = styled.p`
   font-size: 26px;
   color: #8a8a8a;
+  font-weight: 700;
   margin-bottom: 10px;
 `;
 
