@@ -108,7 +108,7 @@ const MyComponent = () => {
 
   return (
     <Main>
-      <Sidebar type={type} currentPage='Weather' />
+      <Sidebar type={type} currentPage="Weather" />
       <Controller
         type={type}
         width={width}
