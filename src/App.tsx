@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import { Home, Season, Time, Weather } from './pages';
 
 const Container = styled.div`
@@ -12,14 +12,14 @@ const Container = styled.div`
 function App() {
   return (
     <Container>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/season" element={<Season />} />
           <Route path="/time" element={<Time />} />
           <Route path="/weather" element={<Weather />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </Container>
   );
 }
