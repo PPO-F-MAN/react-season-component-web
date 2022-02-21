@@ -107,17 +107,17 @@ const MyComponent = () => {
         <MovingChecker handleAnimation={handleAnimation} />
         <BackgroundChecker handleBackground={handleBackground} />
         <InputContainer>
-          <InputProperty>Animation Duration</InputProperty>
+          <InputProperty>Animation Round Time</InputProperty>
           <AppSlider
             size="small"
             defaultValue={duration}
             aria-label="Small"
             valueLabelDisplay="auto"
-            min={5}
+            min={2}
             max={20}
             onChange={handleDuration}
           />
-          <InputUnit>{duration} px</InputUnit>
+          <InputUnit>{duration}s</InputUnit>
         </InputContainer>
       </Controller>
 
@@ -129,7 +129,7 @@ const MyComponent = () => {
             type={type}
             imagePosition={imagePosition}
             animation={animation}
-            animationRoundTime={5}
+            animationRoundTime={duration}
             background={background}
           />
         </Styled.Card>
