@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-season-component-web/static/css/main.3e03ecc6.css",
-    "main.js": "/react-season-component-web/static/js/main.ecffc17a.js",
+    "main.js": "/react-season-component-web/static/js/main.f683d6e3.js",
     "react-syntax-highlighter/refractor-core-import.js": "/react-season-component-web/static/js/react-syntax-highlighter/refractor-core-import.032bb378.chunk.js",
     "react-syntax-highlighter_languages_refractor_abap.js": "/react-season-component-web/static/js/react-syntax-highlighter_languages_refractor_abap.58ead0ec.chunk.js",
     "react-syntax-highlighter_languages_refractor_actionscript.js": "/react-season-component-web/static/js/react-syntax-highlighter_languages_refractor_actionscript.ead10b9e.chunk.js",
@@ -156,7 +156,7 @@
     "react-syntax-highlighter_languages_refractor_yaml.js": "/react-season-component-web/static/js/react-syntax-highlighter_languages_refractor_yaml.4e66e801.chunk.js",
     "index.html": "/react-season-component-web/index.html",
     "main.3e03ecc6.css.map": "/react-season-component-web/static/css/main.3e03ecc6.css.map",
-    "main.ecffc17a.js.map": "/react-season-component-web/static/js/main.ecffc17a.js.map",
+    "main.f683d6e3.js.map": "/react-season-component-web/static/js/main.f683d6e3.js.map",
     "refractor-core-import.032bb378.chunk.js.map": "/react-season-component-web/static/js/react-syntax-highlighter/refractor-core-import.032bb378.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_abap.58ead0ec.chunk.js.map": "/react-season-component-web/static/js/react-syntax-highlighter_languages_refractor_abap.58ead0ec.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_actionscript.ead10b9e.chunk.js.map": "/react-season-component-web/static/js/react-syntax-highlighter_languages_refractor_actionscript.ead10b9e.chunk.js.map",
@@ -312,6 +312,6 @@
   },
   "entrypoints": [
     "static/css/main.3e03ecc6.css",
-    "static/js/main.ecffc17a.js"
+    "static/js/main.f683d6e3.js"
   ]
 }
