@@ -4,7 +4,9 @@ import { Controller, Sidebar } from '../../components';
 import { Container, Title, SubTitle, Content, CodeContainer } from './styled';
 
 function Home() {
-  const CODE = `npm install --save react-season-component`;
+  const CODE = `
+  npm install --save react-season-component
+  `;
   return (
     <>
       <Sidebar type="home" currentPage="Home" />

@@ -25,5 +25,6 @@ export const SubTitle = styled.p`
 `;
 
 export const CodeContainer = styled.code`
+  display: block;
   width: 60%;
 `;
