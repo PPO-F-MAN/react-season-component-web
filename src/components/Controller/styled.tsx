@@ -29,7 +29,8 @@ export const Foreground = styled.div<{ type: ControllerColorType }>`
   padding: 40px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: space-between;
   top: 30px;
   left: 0;
   width: 550px;
@@ -120,7 +121,9 @@ export const CommonVariables = styled.div`
   margin-bottom: 40px;
 `;
 
-export const CardComponentContainer = styled.div``;
+export const CardComponentContainer = styled.div`
+  margin-left: 120px;
+`;
 
 export const CardComponentHeader = styled.div`
   font-weight: 700;
@@ -164,5 +167,5 @@ export const SnowFlake = styled.div`
   background-repeat: no-repeat;
   background-size: 400px;
   margin-top: 300px;
-  margin-left: 160px;
+  margin-left: 100px;
 `;

@@ -5,8 +5,8 @@ import { Home, Season, Time, Weather } from './pages';
 
 const Container = styled.div`
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 `;
 
 function App() {

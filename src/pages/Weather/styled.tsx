@@ -14,10 +14,14 @@ export const Container = styled.div`
 
 export const Title = styled.p`
   font-size: 64px;
+  font-weight: 700;
 `;
 
 export const SubTitle = styled.p`
-  font-size: 36px;
+  font-size: 26px;
+  color: #8a8a8a;
+  font-weight: 700;
+  margin-bottom: 10px;
 `;
 
 interface CardProps {
@@ -31,7 +35,10 @@ export const Card = styled.div<CardProps>`
   height: ${props => props.height}px;
 `;
 
-export const CodeContainer = styled.code``;
+export const CodeContainer = styled.code`
+  display: block;
+  width: 60%;
+`;
 
 export const AppWeather = styled(Weather)<{ visible: boolean }>`
   position: absolute !important;
