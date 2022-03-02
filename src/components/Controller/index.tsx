@@ -1,4 +1,6 @@
-import React from 'react';
+import { useMediaQuery } from '@mui/material';
+import React, { useEffect, useState } from 'react';
+import ControllerToggleButton from './ControllerToggleButton';
 import {
   Container,
   Foreground,
@@ -36,51 +38,57 @@ function Controller({
   onChangeWidth,
   onChangeHeight,
 }: ControllerProps) {
+  const [visibility, setVisibility] = useState(false);
+  const isWide = useMediaQuery('(max-width: 1400px)');
+
   return (
     <Container>
-      <Foreground type={type}>
-        {type === 'home' ? (
-          <SnowFlake />
-        ) : (
-          <>
-            <CustomVariableContainer>
-              <CommonVariables>Custom Variables</CommonVariables>
-              {children}
-            </CustomVariableContainer>
+      {isWide && <ControllerToggleButton visibility={visibility} setVisibility={setVisibility} />}
+      {(visibility || !isWide) && (
+        <Foreground type={type}>
+          {type === 'home' ? (
+            <SnowFlake />
+          ) : (
+            <>
+              <CustomVariableContainer>
+                <CommonVariables>Custom Variables</CommonVariables>
+                {children}
+              </CustomVariableContainer>
 
-            <CardComponentContainer>
-              <CardComponentHeader>Card Component</CardComponentHeader>
-              <InputContainer>
-                <InputProperty>Width</InputProperty>
-                <AppSlider
-                  size="small"
-                  defaultValue={width}
-                  aria-label="Small"
-                  valueLabelDisplay="auto"
-                  min={200}
-                  max={900}
-                  onChange={onChangeWidth}
-                />
-                <InputUnit>{width} px</InputUnit>
-              </InputContainer>
-              <InputContainer>
-                <InputProperty>Height</InputProperty>
-                <AppSlider
-                  size="small"
-                  defaultValue={height}
-                  aria-label="Small"
-                  valueLabelDisplay="auto"
-                  min={200}
-                  max={600}
-                  onChange={onChangeHeight}
-                />
-                <InputUnit>{height} px</InputUnit>
-              </InputContainer>
-            </CardComponentContainer>
-          </>
-        )}
-      </Foreground>
-      <Background type={type} />
+              <CardComponentContainer>
+                <CardComponentHeader>Card Component</CardComponentHeader>
+                <InputContainer>
+                  <InputProperty>Width</InputProperty>
+                  <AppSlider
+                    size="small"
+                    defaultValue={width}
+                    aria-label="Small"
+                    valueLabelDisplay="auto"
+                    min={200}
+                    max={900}
+                    onChange={onChangeWidth}
+                  />
+                  <InputUnit>{width} px</InputUnit>
+                </InputContainer>
+                <InputContainer>
+                  <InputProperty>Height</InputProperty>
+                  <AppSlider
+                    size="small"
+                    defaultValue={height}
+                    aria-label="Small"
+                    valueLabelDisplay="auto"
+                    min={200}
+                    max={600}
+                    onChange={onChangeHeight}
+                  />
+                  <InputUnit>{height} px</InputUnit>
+                </InputContainer>
+              </CardComponentContainer>
+            </>
+          )}
+        </Foreground>
+      )}
+      {(visibility || !isWide) && <Background type={type} />}
     </Container>
   );
 }

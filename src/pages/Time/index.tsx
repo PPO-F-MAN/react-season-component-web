@@ -85,6 +85,7 @@ const MyComponent = () => {
          type="${type}"
          animation="${animation}"
          animationRoundTime={${duration}}
+         imagePosition="${imagePosition}"
          background={${background}}
        />
      </Card>
