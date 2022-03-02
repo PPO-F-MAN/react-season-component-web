@@ -1,46 +1,149 @@
-# Getting Started with Create React App
+# react-season-component
+![NPM](https://img.shields.io/npm/v/react-season-component.svg)
+<div align=center>
+    <a href="#">
+        <img src="https://i.imgur.com/lOSDAVk.png" alt="react-season-component logo" width="300" />     
+    </a>
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Introduction
+날씨, 계절, 시간에 따른 아름다운 효과를 주고싶을 때 사용할 수 있습니다.
 
-## Available Scripts
+# Get Started
+```
+npm i react-season-component
+```
+or
+```
+yarn add react-season-component
+```
 
-In the project directory, you can run:
+# Quick Start
+```typescript
+import { Season, Weather, Time } from "react-season-component"
+```
 
-### `npm start`
+# Document
+Check out our [documentation website](https://ppo-f-man.github.io/react-season-component-web/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Components Usage
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Season
 
-### `npm test`
+![Feb-21-2022 15-46-51](https://user-images.githubusercontent.com/54893898/154903456-854fdd47-a9f3-4c98-ab56-d403aedc3137.gif)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+|props | value | meaning |
+|------|-------|---------|
+|**type** | `auto(default)`, `spring`, `summer`, `autumn`, `winter`| value에 따른 계절 효과 제공 |
+|**isAnimated** | `true(default)`, `false` | 애니메이션 실행 여부 |
 
-### `npm run build`
+## Time
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Feb-21-2022 15-46-17](https://user-images.githubusercontent.com/54893898/154903351-d1d4bd7c-ff9b-430c-b999-fc4e62d5c199.gif)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+|props | value | meaning |
+|------|-------|---------|
+|**type** |`auto`, `morning`, `day`, `evening`, `night`| type에 따른 시간 배경 효과를 보여줍니다.|
+|**animationRoundTime** | number (default: `1`) | 아이콘의 애니메이션 실행 시간을 초(s)단위로 알려줍니다. |
+|**imagePosition** | `left-top`, `left-center`, `left-bottom`, `right-top`, `right-center`, `right-bottom`, `center-top`, `center-center`, `center-bottom` (default: `left-top`) |  아이콘의 위치를 지정합니다. |
+|**animation** | `left-to-right`, `right-to-left`, `top-to-bottom`, `bottom-to-top`, `round` (default: `left-to-right`) |  아이콘 애니메이션 실행 방향|
+|**background** | boolean | false시 기본 배경이 사라집니다.  |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Weather
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![Feb-21-2022 15-48-48](https://user-images.githubusercontent.com/54893898/154903389-51c53474-1dd3-43b8-931d-de21e60445e9.gif)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+|props | value | meaning |
+|------|-------|---------|
+|**type** | `auto`, `sunny`, `cloudy`, `rainy`, `snowy` (default: `auto`) | type에 따른 날씨 배경효과를 보여줍니다.|
+|**typeChangeTerm**| ms (default: `10000`) | type을 'auto'로 했을때, 효과가 변경되는 시간을 의미합니다.|
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Contributors
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/deli-ght"
+        ><img
+          src="https://avatars.githubusercontent.com/deli-ght"
+          width="100px;"
+          alt=""
+        /><br /><sub><b>다나</b></sub></a
+      ><br />
+    </td>
+       <td align="center">
+      <a href="https://github.com/dante01yoon"
+        ><img
+          src="https://avatars.githubusercontent.com/dante01yoon"
+          width="100px;"
+          alt=""
+        /><br /><sub><b>단테</b></sub></a
+      ><br />
+    </td>
+    <td align="center">
+      <a href="https://github.com/junghyeonsu"
+        ><img
+          src="https://avatars.githubusercontent.com/junghyeonsu"
+          width="100px;"
+          alt=""
+        /><br /><sub><b>junghyeonsu</b></sub></a
+      ><br />
+      </td>
+    <td align="center">
+      <a href="https://github.com/deveeni"
+        ><img
+          src="https://avatars.githubusercontent.com/deveeni"
+          width="100px;"
+          alt=""
+        /><br /><sub><b>deveeni</b></sub></a
+      ><br />
+    </td>
+    </tr>
+    <tr>
+    <td align="center">
+      <a href="https://github.com/useonglee"
+        ><img
+          src="https://avatars.githubusercontent.com/useonglee"
+          width="100px;"
+          alt=""
+        /><br /><sub><b>useonglee</b></sub></a
+      ><br />
+    </td>
+      
+  <td align="center">
+      <a href="https://github.com/jiseung-kang"
+        ><img
+          src="https://avatars.githubusercontent.com/jiseung-kang"
+          width="100px;"
+          alt=""
+        /><br /><sub><b>춘식</b></sub></a
+      ><br />
+    </td>
+  <td align="center">
+      <a href="https://github.com/i4song"
+        ><img
+          src="https://avatars.githubusercontent.com/i4song"
+          width="100px;"
+          alt=""
+        /><br /><sub><b>아이뽀송</b></sub></a
+      ><br />
+    </td>
+        <td align="center">
+      <a href="https://github.com/Seongtaek-H"
+        ><img
+          src="https://avatars.githubusercontent.com/Seongtaek-H"
+          width="100px;"
+          alt=""
+        /><br /><sub><b>세인트</b></sub></a
+      ><br />
+    </td>
+  </tr>
+</table>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+# License
+
+MIT. Copyright (c) 2022 PPO F MAN.
