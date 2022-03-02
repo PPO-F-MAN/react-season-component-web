@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-season-component-web/static/css/main.3e03ecc6.css",
-    "main.js": "/react-season-component-web/static/js/main.af04ad38.js",
-    "react-syntax-highlighter/refractor-core-import.js": "/react-season-component-web/static/js/react-syntax-highlighter/refractor-core-import.032bb378.chunk.js",
+    "main.js": "/react-season-component-web/static/js/main.97d0eeb3.js",
+    "react-syntax-highlighter/refractor-core-import.js": "/react-season-component-web/static/js/react-syntax-highlighter/refractor-core-import.502f6f89.chunk.js",
     "react-syntax-highlighter_languages_refractor_abap.js": "/react-season-component-web/static/js/react-syntax-highlighter_languages_refractor_abap.58ead0ec.chunk.js",
     "react-syntax-highlighter_languages_refractor_actionscript.js": "/react-season-component-web/static/js/react-syntax-highlighter_languages_refractor_actionscript.ead10b9e.chunk.js",
     "react-syntax-highlighter_languages_refractor_ada.js": "/react-season-component-web/static/js/react-syntax-highlighter_languages_refractor_ada.cc389ca2.chunk.js",
@@ -156,8 +156,8 @@
     "react-syntax-highlighter_languages_refractor_yaml.js": "/react-season-component-web/static/js/react-syntax-highlighter_languages_refractor_yaml.4e66e801.chunk.js",
     "index.html": "/react-season-component-web/index.html",
     "main.3e03ecc6.css.map": "/react-season-component-web/static/css/main.3e03ecc6.css.map",
-    "main.af04ad38.js.map": "/react-season-component-web/static/js/main.af04ad38.js.map",
-    "refractor-core-import.032bb378.chunk.js.map": "/react-season-component-web/static/js/react-syntax-highlighter/refractor-core-import.032bb378.chunk.js.map",
+    "main.97d0eeb3.js.map": "/react-season-component-web/static/js/main.97d0eeb3.js.map",
+    "refractor-core-import.502f6f89.chunk.js.map": "/react-season-component-web/static/js/react-syntax-highlighter/refractor-core-import.502f6f89.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_abap.58ead0ec.chunk.js.map": "/react-season-component-web/static/js/react-syntax-highlighter_languages_refractor_abap.58ead0ec.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_actionscript.ead10b9e.chunk.js.map": "/react-season-component-web/static/js/react-syntax-highlighter_languages_refractor_actionscript.ead10b9e.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_ada.cc389ca2.chunk.js.map": "/react-season-component-web/static/js/react-syntax-highlighter_languages_refractor_ada.cc389ca2.chunk.js.map",
@@ -312,6 +312,6 @@
   },
   "entrypoints": [
     "static/css/main.3e03ecc6.css",
-    "static/js/main.af04ad38.js"
+    "static/js/main.97d0eeb3.js"
   ]
 }
