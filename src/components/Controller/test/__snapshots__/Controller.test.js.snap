@@ -1,0 +1,217 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Controller component test Render Controller 1`] = `
+<div
+  className="css-by0x3"
+>
+  <div
+    className="css-8r7537"
+    type="spring"
+  >
+    <div
+      className="css-0"
+    >
+      <div
+        className="css-hpyoef"
+      >
+        Custom Variables
+      </div>
+    </div>
+    <div
+      className="css-183wyk4"
+    >
+      <div
+        className="css-19f7q00"
+      >
+        Card Component
+      </div>
+      <div
+        className="css-7s8pi2"
+      >
+        <div
+          className="css-10i6va2"
+        >
+          Width
+        </div>
+        <span
+          className="MuiSlider-colorPrimary MuiSlider-sizeSmall MuiSlider-root css-10r2c0b-MuiSlider-root"
+          defaultValue={500}
+          onMouseDown={[Function]}
+        >
+          <span
+            className="MuiSlider-rail css-14pt78w-MuiSlider-rail"
+          />
+          <span
+            className="MuiSlider-track css-1n40zqk-MuiSlider-track"
+            style={
+              Object {
+                "left": "0%",
+                "width": "42.857142857142854%",
+              }
+            }
+          />
+          <span
+            className="MuiSlider-thumbColorPrimary MuiSlider-thumbSizeSmall MuiSlider-thumb css-14gf62f-MuiSlider-thumb"
+            data-index={0}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            style={
+              Object {
+                "left": "42.857142857142854%",
+                "pointerEvents": undefined,
+              }
+            }
+          >
+            <input
+              aria-label="Small"
+              aria-orientation="horizontal"
+              aria-valuemax={900}
+              aria-valuemin={200}
+              aria-valuenow={500}
+              data-index={0}
+              disabled={false}
+              max={900}
+              min={200}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              step={1}
+              style={
+                Object {
+                  "border": 0,
+                  "clip": "rect(0 0 0 0)",
+                  "direction": "ltr",
+                  "height": "100%",
+                  "margin": -1,
+                  "overflow": "hidden",
+                  "padding": 0,
+                  "position": "absolute",
+                  "whiteSpace": "nowrap",
+                  "width": "100%",
+                }
+              }
+              type="range"
+              value={500}
+            />
+            <span
+              aria-hidden={true}
+              className="MuiSlider-valueLabel css-gdpt3b-MuiSlider-valueLabel"
+            >
+              <span
+                className="MuiSlider-valueLabelCircle"
+              >
+                <span
+                  className="MuiSlider-valueLabelLabel"
+                >
+                  500
+                </span>
+              </span>
+            </span>
+          </span>
+        </span>
+        <div
+          className="css-5pu1uj"
+        >
+          500
+           px
+        </div>
+      </div>
+      <div
+        className="css-7s8pi2"
+      >
+        <div
+          className="css-10i6va2"
+        >
+          Height
+        </div>
+        <span
+          className="MuiSlider-colorPrimary MuiSlider-sizeSmall MuiSlider-root css-10r2c0b-MuiSlider-root"
+          defaultValue={360}
+          onMouseDown={[Function]}
+        >
+          <span
+            className="MuiSlider-rail css-14pt78w-MuiSlider-rail"
+          />
+          <span
+            className="MuiSlider-track css-1n40zqk-MuiSlider-track"
+            style={
+              Object {
+                "left": "0%",
+                "width": "40%",
+              }
+            }
+          />
+          <span
+            className="MuiSlider-thumbColorPrimary MuiSlider-thumbSizeSmall MuiSlider-thumb css-14gf62f-MuiSlider-thumb"
+            data-index={0}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            style={
+              Object {
+                "left": "40%",
+                "pointerEvents": undefined,
+              }
+            }
+          >
+            <input
+              aria-label="Small"
+              aria-orientation="horizontal"
+              aria-valuemax={600}
+              aria-valuemin={200}
+              aria-valuenow={360}
+              data-index={0}
+              disabled={false}
+              max={600}
+              min={200}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              step={1}
+              style={
+                Object {
+                  "border": 0,
+                  "clip": "rect(0 0 0 0)",
+                  "direction": "ltr",
+                  "height": "100%",
+                  "margin": -1,
+                  "overflow": "hidden",
+                  "padding": 0,
+                  "position": "absolute",
+                  "whiteSpace": "nowrap",
+                  "width": "100%",
+                }
+              }
+              type="range"
+              value={360}
+            />
+            <span
+              aria-hidden={true}
+              className="MuiSlider-valueLabel css-gdpt3b-MuiSlider-valueLabel"
+            >
+              <span
+                className="MuiSlider-valueLabelCircle"
+              >
+                <span
+                  className="MuiSlider-valueLabelLabel"
+                >
+                  360
+                </span>
+              </span>
+            </span>
+          </span>
+        </span>
+        <div
+          className="css-5pu1uj"
+        >
+          360
+           px
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="css-17uhyr6"
+    type="spring"
+  />
+</div>
+`;
