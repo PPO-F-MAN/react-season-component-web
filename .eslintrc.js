@@ -1,12 +1,17 @@
 module.exports = {
+  env: {
+    jest: true,
+  },
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'prettier'],
+  plugins: ['@typescript-eslint', 'prettier', 'testing-library', 'jest-dom'],
   extends: [
     'airbnb',
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:prettier/recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:testing-library/react',
+    'plugin:jest-dom/recommended',
   ],
   rules: {
     'linebreak-style': 0,
