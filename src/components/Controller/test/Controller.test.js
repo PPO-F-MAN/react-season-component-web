@@ -1,18 +1,16 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import renderer from 'react-test-renderer';
-import { renderHook, act } from '@testing-library/react-hooks';
-
 import Controller from '../index';
-import useMediaQuery from '../hooks/useMediaQuery';
+import { TypeChecker } from '../../Season/TypeChecker';
 
 describe('Controller component test', () => {
   let ControllerComponent;
   let type;
+  let typehandler;
 
   beforeAll(() => {
     type = 'spring';
+    typehandler = jest.fn();
     ControllerComponent = (
       <Controller
         type={type}
@@ -20,7 +18,9 @@ describe('Controller component test', () => {
         height={360}
         onChangeWidth={jest.fn()}
         onChangeHeight={jest.fn()}
-      />
+      >
+        <TypeChecker handleType={typehandler} />
+      </Controller>
     );
   });
 
@@ -28,10 +28,4 @@ describe('Controller component test', () => {
     const component = renderer.create(ControllerComponent);
     expect(component.toJSON()).toMatchSnapshot();
   });
-
-  //   it('test controller', () => {
-  //     const { result } = renderHook(() => useMediaQuery('(max-width: 1300px)'));
-
-  //     expect(result.current).toBe(true);
-  //   });
 });
