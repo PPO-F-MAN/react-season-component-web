@@ -13,7 +13,8 @@ export type ControllerColorType =
   | 'cloudy'
   | 'rainy'
   | 'snowy'
-  | 'home';
+  | 'home'
+  | undefined;
 
 export const Container = styled.div`
   position: fixed;
