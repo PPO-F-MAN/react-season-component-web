@@ -1,5 +1,5 @@
 import { useMediaQuery } from '@mui/material';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import ControllerToggleButton from './ControllerToggleButton';
 import {
   Container,
@@ -18,7 +18,7 @@ import {
 } from './styled';
 
 export interface ControllerProps {
-  type: ControllerColorType;
+  type?: ControllerColorType;
   children?: React.ReactNode;
   // 현재 너비
   width?: number;
