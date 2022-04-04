@@ -70,7 +70,8 @@
     "prettier": "prettier --check src/* '*.{js,jsx,ts,tsx}'",
     "prettier:fix": "prettier --write src/* '*.{js,jsx,ts,tsx}'",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "chromatic": "npx chromatic --project-token=79c3f1fd3876"
   },
   "eslintConfig": {
     "extends": [
