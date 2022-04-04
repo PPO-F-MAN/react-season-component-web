@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Controller Auto 1`] = `
+<Controller
+  height={360}
+  type="auto"
+  width={500}
+/>
+`;
+
+exports[`Storyshots Controller Spring 1`] = `
+<Controller
+  height={360}
+  type="spring"
+  width={500}
+/>
+`;
+
+exports[`Storyshots Controller Winter 1`] = `
+<Controller
+  height={360}
+  type="winter"
+  width={500}
+/>
+`;
+
+exports[`Storyshots SeasonPage Default 1`] = `
+<HashRouter>
+  <SeasonPage />
+</HashRouter>
+`;
+
+exports[`Storyshots Sidebar Home 1`] = `
+<HashRouter>
+  <Sidebar
+    currentPage="Home"
+    type="home"
+  />
+</HashRouter>
+`;
+
+exports[`Storyshots TimePage Default 1`] = `
+<HashRouter>
+  <TimePage />
+</HashRouter>
+`;
+
+exports[`Storyshots TypeChecker Default 1`] = `
+<Controller
+  height={360}
+  onChangeHeight={[Function]}
+  onChangeWidth={[Function]}
+  type="auto"
+  width={500}
+>
+  <TypeChecker
+    handleType={[Function]}
+  />
+</Controller>
+`;
+
+exports[`Storyshots WeatherPage Default 1`] = `
+<HashRouter>
+  <WeatherPage />
+</HashRouter>
+`;
