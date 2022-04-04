@@ -1,15 +1,10 @@
 import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { userEvent, within, waitFor } from '@storybook/testing-library';
+import { ComponentMeta } from '@storybook/react';
+import { withKnobs } from '@storybook/addon-knobs';
+import useState from 'storybook-addon-state';
 import { TypeChecker } from './index';
 import Controller from '../Controller';
-import * as ControllerStories from '../Controller/Controller.stories';
-
-const types = {
-  auto: ControllerStories.Auto.args?.type,
-  spring: ControllerStories.Spring.args?.type,
-  winter: ControllerStories.Winter.args?.type,
-};
+import { ControllerColorType } from '../Controller/styled';
 
 export default {
   component: TypeChecker,
@@ -17,33 +12,35 @@ export default {
   argTypes: {
     handleType: { action: 'clicked' },
   },
-  decorators: [story => <Controller>{story()}</Controller>],
+  decorators: [withKnobs],
 } as ComponentMeta<typeof TypeChecker>;
 
-/* eslint-disable react/jsx-props-no-spreading */
-/* eslint-disable-next-line react/function-component-definition */
-const Template: ComponentStory<typeof TypeChecker> = args => <TypeChecker {...args} />;
+export function TypeCheckerComponent(): JSX.Element {
+  const [type, setType] = useState<ControllerColorType>('click type', 'auto');
+  const [width, setWidth] = useState<number>('changes width', 500);
+  const [height, setHeight] = useState<number>('changes height', 360);
 
-export const Auto = Template.bind({});
+  const handleWidth = (e: any) => {
+    setWidth(e.target.value);
+  };
 
-export const Spring = Template.bind({});
-Spring.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement);
+  const handleHeight = (e: any) => {
+    setHeight(e.target.value);
+  };
 
-  await waitFor(async () => {
-    // eslint-disable-next-line testing-library/no-wait-for-side-effects
-    userEvent.click(canvas.getByText('spring'));
-  });
+  return (
+    <Controller
+      type={type}
+      width={width}
+      height={height}
+      onChangeWidth={handleWidth}
+      onChangeHeight={handleHeight}
+    >
+      <TypeChecker handleType={e => setType(e.target.value)} />
+    </Controller>
+  );
+}
+
+TypeCheckerComponent.story = {
+  name: 'Default',
 };
-Spring.decorators = [story => <Controller type={types.spring}>{story()}</Controller>];
-
-export const Winter = Template.bind({});
-Winter.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement);
-
-  await waitFor(async () => {
-    // eslint-disable-next-line testing-library/no-wait-for-side-effects
-    userEvent.click(canvas.getByText('winter'));
-  });
-};
-Winter.decorators = [story => <Controller type={types.winter}>{story()}</Controller>];

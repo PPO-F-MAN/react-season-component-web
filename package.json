@@ -26,6 +26,7 @@
     "@storybook/addon-actions": "^6.4.19",
     "@storybook/addon-essentials": "^6.4.19",
     "@storybook/addon-interactions": "^6.4.19",
+    "@storybook/addon-knobs": "^6.4.0",
     "@storybook/addon-links": "^6.4.19",
     "@storybook/addon-storyshots": "^6.4.20",
     "@storybook/builder-webpack5": "^6.4.19",
@@ -39,6 +40,7 @@
     "@types/react-test-renderer": "^17.0.1",
     "@typescript-eslint/eslint-plugin": "^5.12.0",
     "@typescript-eslint/parser": "^5.12.0",
+    "chromatic": "^6.5.3",
     "eslint": "^8.9.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.4.0",
@@ -53,12 +55,13 @@
     "jest-styled-components": "^7.0.8",
     "prettier": "^2.5.1",
     "react-test-renderer": "^17.0.2",
+    "storybook-addon-state": "^1.0.3",
     "webpack": "^5.70.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
@@ -67,7 +70,8 @@
     "prettier": "prettier --check src/* '*.{js,jsx,ts,tsx}'",
     "prettier:fix": "prettier --write src/* '*.{js,jsx,ts,tsx}'",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "chromatic": "npx chromatic --project-token=79c3f1fd3876"
   },
   "eslintConfig": {
     "extends": [
