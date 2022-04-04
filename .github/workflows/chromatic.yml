@@ -3,7 +3,7 @@ name: 'Chromatic Deployment'
 on:
   push:
     branches:
-      - main
+      - develop
     paths: ['src/components/**/*.stories.tsx']
 jobs:
   test:
