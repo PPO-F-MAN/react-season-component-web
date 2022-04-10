@@ -5,6 +5,9 @@ on:
     branches:
       - develop
     paths: ['src/components/**/*.stories.tsx']
+  pull_request:
+    branches:
+      - '*'
 jobs:
   test:
     runs-on: ubuntu-latest
