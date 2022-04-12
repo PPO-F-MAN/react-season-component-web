@@ -38,7 +38,7 @@ export const Foreground = styled.div<{ type: ControllerColorType }>`
   background: ${({ type }) => {
     switch (type) {
       case 'spring':
-        return 'red';
+        return '#FFF9F3';
       case 'summer':
         return '#FDFEEA';
       case 'autumn':
